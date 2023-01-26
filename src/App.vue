@@ -6,8 +6,14 @@ import Layout from './layout/layout.vue';
 </script>
 
 <template>
-  <Layout></Layout>
+  <Layout>
+    <router-view></router-view>
+  </Layout>
 </template>
 
 <style scoped>
+body, html{
+  height: 100vh;
+  overflow: hidden;
+}
 </style>

@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="logo">Mov</div>
     <div class="nav-links space-y-8">
-      <router-link class="block p-4 rounded" active-class="nav-link-active" v-for='{ path, icon, activeIcon } in menu' :key='path' :to='path'>
+      <router-link class="md:block p-4 rounded" active-class="nav-link-active" v-for='{ path, icon, activeIcon } in menu' :key='path' :to='path'>
         <component :is='route.path === path ? activeIcon : icon' class="w-6 h-6"/>
       </router-link>
     </div>
@@ -17,7 +17,7 @@ import { useRoute, useRouter } from 'vue-router'
 
     const menu = [
       {
-        path: '/',
+        path: '/home',
         icon: HomeIcon,
         activeIcon: HomeSolid
       },

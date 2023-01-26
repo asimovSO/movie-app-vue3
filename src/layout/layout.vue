@@ -1,9 +1,9 @@
 <template>
-    <div class="flex">
+    <div class="md:flex h-screen overflow-hidden">
         <Navbar />
-        <slot>
-            <router-view></router-view>
-        </slot>
+        <div class="overflow-auto py-8 px-6  flex-grow">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
