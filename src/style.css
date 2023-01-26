@@ -13,7 +13,7 @@
 
 @layer components{
     .navbar{
-        @apply h-screen p-4 bg-bg-light flex flex-col items-center justify-between
+        @apply md:h-screen p-4 bg-bg-light md:flex md:flex-col   items-center justify-between sm:fixed md:static sm:bottom-0 
     }
    .nav-link-active{
     @apply text-rose-600 bg-gray-700/25

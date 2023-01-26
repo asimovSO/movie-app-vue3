@@ -1,12 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HelloWorld from '../components/HelloWorld.vue'
+import HomePage from "../pages/HomePage.vue";
+import MoviePage from "../pages/MoviePage.vue";
 
 export default createRouter({
-    history: createWebHistory(),
-    routes: [
+  history: createWebHistory(),
+  routes: [
+    {
+      path: "/",
+      redirect: "/home",
+      children: [
         {
-            path: '/',
-            component: HelloWorld
-        }
-    ]
-})
+          path: "/home",
+          component: HomePage,
+        },
+      ],
+    },
+    {
+      path: "/movies/:id",
+      component: MoviePage,
+    },
+  ],
+});

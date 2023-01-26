@@ -7,6 +7,9 @@ module.exports = {
       colors:{
         bg: '#09030f',
         "bg-light": '#0d0317'
+      },
+      borderWidth: {
+        1: 1
       }
     },
   },
