@@ -2,7 +2,7 @@
     <div class="md:flex h-screen overflow-hidden">
         <Navbar />
         <div class="overflow-auto py-8 px-6  flex-grow">
-            <slot></slot>
+        <router-view></router-view>
         </div>
     </div>
 </template>
