@@ -25,7 +25,6 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/vue/24/solid";
 import { defineProps, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import usePagination from '../hooks/usePagination'
 
 const route = useRoute();
 const router = useRouter();
@@ -33,7 +32,6 @@ const router = useRouter();
 const currPage = ref(route.query.page || 1)
 
 defineProps({
-  // currPage: [String, Number],
   total_pages: [Number, String]
 })
 

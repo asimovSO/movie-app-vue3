@@ -1,16 +1,11 @@
 <script setup>
-import { ref, reactive, onMounted, onUpdated, watch, watchEffect } from "vue";
-import { useRoute, useRouter } from "vue-router";
-import useFetchMovies from "../hooks/useFetchMovies";
+import {  onMounted, watch} from "vue";
+import { useRoute } from "vue-router";
 import MovieCard from "../components/MovieCard.vue";
-import SelectMovies from "../components/SelectMovies.vue";
-import usePagination from "../hooks/usePagination";
 import { useMovieStore } from "../stores/useMovieStore";
 import { storeToRefs } from "pinia";
 
-const test = ref(0);
 const route = useRoute();
-const router = useRouter();
 
 const store = useMovieStore();
 const { movies } = storeToRefs(store);

@@ -1,9 +1,6 @@
 <script setup>
-import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
-import useFetchMovies from "../hooks/useFetchMovies";
 import { StarIcon } from "@heroicons/vue/24/solid";
-import { instance, api_key } from '../service/api'
 import { useMovieStore } from "../stores/useMovieStore";
 import { storeToRefs } from "pinia";
 
