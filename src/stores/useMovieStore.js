@@ -8,6 +8,7 @@ export const useMovieStore = defineStore("movies", () => {
   const moviesData = ref();
 
   function getSingleMovie(id) {
+    singleMovieData.value = null
     instance
       .get(`/movie/${id}?api_key=${api_key}`)
       .then((res) => (singleMovieData.value = res.data));
