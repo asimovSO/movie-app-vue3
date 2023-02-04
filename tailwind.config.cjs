@@ -4,6 +4,10 @@ module.exports = {
 
   theme: {
     extend: {
+      screens: {
+        default: '768px',
+        sm: '230px'
+      },
       colors:{
         bg: '#09030f',
         "bg-light": '#0d0317'
