@@ -1,6 +1,6 @@
 <template>
     <div class="md:flex h-screen overflow-hidden">
-        <Navbar />
+        <!-- <Navbar /> -->
         <div class="overflow-auto py-8 px-6  flex-grow">
         <router-view></router-view>
         </div>

@@ -3,7 +3,6 @@ import HomePage from "../pages/HomePage.vue";
 import MoviePage from "../pages/MoviePage.vue";
 import ListMovies from "../pages/ListMovies.vue";
 
-import TestPage from "../pages/TestPage.vue";
 
 export default createRouter({
   history: createWebHistory(),
