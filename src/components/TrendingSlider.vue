@@ -2,14 +2,13 @@
 import { ref } from "vue";
 import TrendingSliderItem from "./TrendingSliderItem.vue";
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay, EffectFade, Navigation } from 'swiper'
+import { Autoplay, EffectFade, Pagination } from 'swiper'
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-import 'swiper/css/navigation';
 
 const data = ref([
   {
@@ -39,26 +38,26 @@ const autoplayOptions = {
   disableOnInteraction: true,
 }
 
+const paginationOptions = {
+  type: 'bullets',
+  clickable: true,
+  // bulletClass: 'bg-white',
+  // bulletActiveClass: 'text-rose-600',
+
+}
 // const modules = [Autoplay, EffectFade, Navigation]
 
 </script>
 
 <template>
 
-    <Swiper 
-      :modules="[EffectFade, Autoplay]" 
-      class="h-[400px] w-full"
-      :autoplay="autoplayOptions"
-      :grabCursor="true"
-      effect='fade' 
-      :loop="true"
-      :spaceBetween="1"
-      >
-        <SwiperSlide v-for="(trend, index) in data" :key="trend.id" >
-          <TrendingSliderItem :id="trend.id" :title="trend.title" :overview="trend.overview" :poster="trend.poster" />
-        </SwiperSlide>
-    </Swiper>
-  
+  <Swiper :modules="[EffectFade, Autoplay, Pagination]" class="h-[400px] max-w-[900px]" :autoplay="autoplayOptions"
+    :pagination="paginationOptions" :grabCursor="true" effect='fade' :loop="true" :spaceBetween="1">
+    <SwiperSlide v-for="(trend, index) in data" :key="trend.id">
+      <TrendingSliderItem :id="trend.id" :title="trend.title" :overview="trend.overview" :poster="trend.poster" />
+    </SwiperSlide>
+  </Swiper>
+
 </template>
 
 <style scoped>
