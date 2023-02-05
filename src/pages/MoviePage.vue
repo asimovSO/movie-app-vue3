@@ -3,6 +3,7 @@ import { useRoute } from "vue-router";
 import { StarIcon } from "@heroicons/vue/24/solid";
 import { useMovieStore } from "../stores/useMovieStore";
 import { storeToRefs } from "pinia";
+import { onMounted } from "vue";
 
 const route = useRoute();
 const store = useMovieStore()
@@ -25,8 +26,8 @@ onMounted(async() => {
         />
       </div>
       <div class="info-movie">
-        <h1 class="font-bold text-4xl mb-2">{{ movie.original_title }}</h1>
-        <p class="text-gray-700 text-lg mb-5">{{ movie.tagline }}</p>
+        <h1 class="font-bold text-4xl mb-2">{{ movie.title }}</h1>
+        <p class="text-gray-700 text-lg mb-10">{{ movie.tagline }}</p>
         <div
           class="inline-flex  items-center"
         >
@@ -39,7 +40,7 @@ onMounted(async() => {
         <div class="genres flex py-4">
           <Chip v-for="genre in movie.genres" :key="genre.id">{{ genre.name }}</Chip>
         </div>
-        <div class="overview">
+        <div class="overview md:max-w-[80%]">
         <p>{{ movie.overview }}</p>
       </div>
       </div>

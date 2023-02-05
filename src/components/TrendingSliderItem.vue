@@ -11,8 +11,8 @@ defineProps({
 
 <template>
   <div class="h-full w-full relative left-1/2 top-0 -translate-x-1/2">
-    <img :src="poster" alt="" class="w-full h-full object-cover bg-center rounded ">
-    <div class="rounded py-6 px-4 absolute bg-black/40 backdrop-blur-[4px] md:bottom-8  md:left-8  md:max-w-[60%]
+    <img :src="poster" alt="" class="w-full h-full object-cover bg-center rounded-md ">
+    <div class="rounded py-6 px-4 absolute bg-black/40 backdrop-blur-[4px] sm:bottom-8  sm:left-8  sm:max-w-[60%]
       flex flex-col justify-between gap-4">
       <div class="break-words">
         <h1 class="title text-lg mb-2 font-semibold ">{{ title }}</h1>
