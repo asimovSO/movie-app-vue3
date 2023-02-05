@@ -11,7 +11,6 @@
   "dependencies": {
     "@heroicons/vue": "^2.0.13",
     "axios": "^1.2.3",
-    "json-server": "^0.17.1",
     "pinia": "^2.0.29",
     "swiper": "^9.0.1",
     "vue": "^3.2.45",

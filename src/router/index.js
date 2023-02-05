@@ -10,14 +10,17 @@ export default createRouter({
     {
       path: "/home",
       component: HomePage,
+      alias: '/',
+      name: 'home'
     },
     {
       path: '/movies/:type',
-      component:  () => import('../pages/ListMovies.vue')
+      component:  () => import('../pages/ListMovies.vue'),
+      name: 'movies'
     },
     {
       path: "/movies/:type/:id",
-      component: MoviePage,
+      component: () => import('../pages/MoviePage.vue'),
       name: "moviePage",
     },
   ],

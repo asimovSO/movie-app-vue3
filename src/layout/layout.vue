@@ -1,7 +1,7 @@
 <template>
-    <div class="md:flex h-screen overflow-hidden">
-        <!-- <Navbar /> -->
-        <div class="overflow-auto py-8 px-6  flex-grow">
+    <div class=" sm:flex sm:flex-col-reverse md:flex-row h-screen overflow-hidden">
+        <Navbar />
+        <div class="overflow-auto py-8 px-6 h-screen flex-grow">
         <router-view></router-view>
         </div>
     </div>

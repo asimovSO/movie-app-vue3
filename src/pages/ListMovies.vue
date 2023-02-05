@@ -11,16 +11,16 @@ const store = useMovieStore();
 const { movies } = storeToRefs(store);
 
 onMounted(async () => {
-  store.getMovies(route.params.type, route.query.page || 1);
+  store.getMovies(route.params.type || 'popular', route.query.page || 1);
 });
 
-watch(route, () => store.getMovies(route.params.type, route.query.page));
+watch(route, () => store.getMovies(route.params.type || 'popular', route.query.page));
 </script>
 
 <template>
   <div v-if="movies">
-    <div class="grid grid-cols-6">
-      <MovieCard v-for="movie in movies.results" :key="movie.id" :id="movie.id" :title="movie.original_title"
+    <div class="grid grid-cols-5 gap-8">
+      <MovieCard v-for="movie in movies.results" :key="movie.id" :id="movie.id" :title="movie.title"
         :release-year="movie.release_date" :poster="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" />
     </div>
     <button @click="navigateNext">NEXT</button>

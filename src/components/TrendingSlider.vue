@@ -51,7 +51,7 @@ const paginationOptions = {
 
 <template>
 
-  <Swiper :modules="[EffectFade, Autoplay, Pagination]" class="md:h-[400px] sm:h-56 max-w-[900px]" :autoplay="autoplayOptions"
+  <Swiper :modules="[EffectFade, Pagination]" class="md:h-[400px] sm:h-56 max-w-[900px] py-8" 
     :pagination="paginationOptions" :grabCursor="true" effect='fade' :loop="true" :spaceBetween="1">
     <SwiperSlide v-for="(trend, index) in data" :key="trend.id">
       <TrendingSliderItem :id="trend.id" :title="trend.title" :overview="trend.overview" :poster="trend.poster" />
@@ -61,10 +61,7 @@ const paginationOptions = {
 </template>
 
 <style scoped>
-h1 {
-  text-overflow: ellipsis;
-  overflow-x: hidden;
-}
+
 
 .desc {
   overflow: hidden;
