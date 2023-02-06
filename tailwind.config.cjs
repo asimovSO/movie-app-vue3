@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        sm: '230px'
+        
       },
       colors:{
         bg: '#09030f',

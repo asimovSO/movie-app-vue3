@@ -10,7 +10,7 @@ const route = useRoute();
 const store = useMovieStore();
 const { movies } = storeToRefs(store);
 
-onMounted(async () => {
+onMounted( () => {
   store.getMovies(route.params.type || 'popular', route.query.page || 1);
 });
 
