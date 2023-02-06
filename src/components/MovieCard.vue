@@ -20,8 +20,8 @@ const formatedDate = computed(() => props.releaseYear.slice(0, 4));
       params: { type: route.params.type || 'popular', id: id },
     }"
   >
-    <div class="w-full">
-      <img class="w-full rounded h-fit" :src="'https://image.tmdb.org/t/p/w500/' + poster" alt="" />
+    <div class="w-full h-full">
+      <img class="w-full rounded h-fit alt" :src="'https://image.tmdb.org/t/p/w500/' + poster" alt="not found"  />
 
       <h4 class="title font-medium text-lg my-2">{{ title }}</h4>
 

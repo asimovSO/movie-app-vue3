@@ -23,19 +23,3 @@
     @apply text-rose-600 bg-gray-700/25
    }
 }
-
-.swiper-pagination-bullet{
-    transition: all .2s;
-    background: #07A5E0 !important;
-    height: 8px !important;
-    width: 8px !important;
-    opacity: .5 !important;
-    margin: 0 6px !important;
-}
-
-.swiper-pagination-bullet-active{
-    background: #07A5E0 !important;
-    width: 24px !important;
-    border-radius: 8px !important;
-    opacity: 1 !important;
-}

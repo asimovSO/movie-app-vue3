@@ -21,19 +21,22 @@ export const useMovieStore = defineStore("movies", () => {
       .then((res) => (moviesData.value = res.data));
   }
 
-  function getTrendingMovies() {
-    instance(`trending/movie/week?api_key=${api_key}`).then(
+  async function getTrendingMovies() {
+    await instance(`trending/movie/week?api_key=${api_key}`).then(
       (res) => (trendingMoviesData.value = res.data)
     );
   }
 
   const movie = computed(() => singleMovieData.value);
   const movies = computed(() => moviesData.value);
+  const trendingMovies = computed(() => trendingMoviesData.value.results.slice(0, 10))
 
   return {
     singleMovieData,
     moviesData,
     movie,
+    movies,
+    trendingMovies,
     getMovies,
     getSingleMovie,
     trendingMoviesData,
