@@ -2,7 +2,7 @@
 import { onMounted } from "vue";
 import TrendingSliderItem from "./TrendingSliderItem.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, EffectFade, Pagination } from "swiper";
+import {  EffectFade, Pagination } from "swiper";
 import { useMovieStore } from "../stores/useMovieStore";
 
 // Import Swiper styles
@@ -32,11 +32,11 @@ import "swiper/css/effect-fade";
 // ])
 const store = useMovieStore();
 
-const autoplayOptions = {
-  delay: 3500,
-  pauseOnMouseEnter: true,
-  disableOnInteraction: true,
-};
+// const autoplayOptions = {
+//   delay: 3500,
+//   pauseOnMouseEnter: true,
+//   disableOnInteraction: true,
+// };
 
 const paginationOptions = {
   clickable: true,
@@ -50,7 +50,7 @@ onMounted(() => store.getTrendingMovies())
 <template>
   <Swiper
     v-if="store.trendingMoviesData"
-    :modules="[EffectFade, Pagination, Autoplay]"
+    :modules="[EffectFade, Pagination]"
     class="md:h-[400px] sm:h-56 max-w-[900px] py-8"
     :pagination="paginationOptions"
     effect="fade"
@@ -62,7 +62,7 @@ onMounted(() => store.getTrendingMovies())
   >
     <SwiperSlide
       v-for="(trend, index) in store.trendingMovies"
-      :key="trend.id"
+      :key="index"
     >
       <TrendingSliderItem
         :id="trend.id"

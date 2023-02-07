@@ -16,7 +16,6 @@ const props = defineProps({
 const {varMovies, getFetchedMovies} = useFetchMovies()
 
 onMounted(async() => await getFetchedMovies(props.typeSearch))
-console.log(varMovies);
 </script>
 
 <template>

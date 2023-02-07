@@ -21,8 +21,8 @@ export const useMovieStore = defineStore("movies", () => {
       .then((res) => (moviesData.value = res.data));
   }
 
-  async function getTrendingMovies() {
-    await instance(`trending/movie/week?api_key=${api_key}`).then(
+  function getTrendingMovies() {
+     instance(`trending/movie/week?api_key=${api_key}`).then(
       (res) => (trendingMoviesData.value = res.data)
     );
   }

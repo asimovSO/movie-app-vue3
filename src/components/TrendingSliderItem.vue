@@ -23,7 +23,7 @@ function navigateToMovie(id){
     <div class="rounded py-6 px-4 absolute bg-black/40 backdrop-blur-[4px] sm:bottom-8  sm:left-8  sm:max-w-[55%]
       flex flex-col justify-between gap-4">
       <div class="break-words">
-        <h1 class="title text-lg mb-2 font-semibold ">{{ title }}</h1>
+        <h1 class="title text-xl mb-2 font-semibold ">{{ title }}</h1>
         <p class="desc text-white/90 text-sm">{{ overview }}</p>
       </div>
       <div class="flex justify-between items-center gap-1">
