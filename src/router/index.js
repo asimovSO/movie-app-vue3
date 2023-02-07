@@ -23,5 +23,10 @@ export default createRouter({
       component: () => import('../pages/MoviePage.vue'),
       name: "moviePage",
     },
+    {
+      path: '/search',
+      component: () => import('../pages/SearchPage.vue'),
+      name: 'search'
+    }
   ],
 });

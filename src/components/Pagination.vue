@@ -1,23 +1,16 @@
 <template>
-  <div class="flex gap-3">
-    <button class="prev" @click="navigatePrevious">
-      <ChevronLeftIcon class="rounded text-white w-6 bg-gray-700" />
+  <div class="flex items-stretch gap-3 py-4">
+    <button class="prev rounded-md p-2 bg-slate-900 hover:bg-rose-600 transition-all" @click="navigatePrevious">
+      <ChevronLeftIcon class=" text-white w-6 h-6" />
     </button>
-    <input
-      type="number"
-      min="1"
-      :max="total_pages"
-      v-model="currPage"
-      @keypress.enter="navigateToPage"
-      class="text-black text-center w-24 outline-none"
-    />
+    <div class="items-center flex gap-3 h-full text-lg">
+      <input type="number" min="1" :max="total_pages" v-model="currPage" @keypress.enter="navigateToPage"
+      class=" py-2 h-full text-center w-24 outline-none bg-gray-900 rounded-md" />
     <span>/</span>
     <div>{{ total_pages }}</div>
-    <button
-      class="next rounded text-white w-6 bg-gray-700"
-      @click="navigateNext"
-    >
-      <ChevronRightIcon />
+    </div>
+    <button class="next rounded-md p-2 bg-slate-900 hover:bg-rose-600 transition-all" @click="navigateNext">
+      <ChevronRightIcon class=" text-white w-6 h-6" />
     </button>
   </div>
 </template>
@@ -31,33 +24,38 @@ const router = useRouter();
 
 const currPage = ref(route.query.page || 1)
 
-defineProps({
+const props = defineProps({
   total_pages: [Number, String]
 })
 
-function navigateToPage(){
-  router.push({query: {page: currPage.value}})
+function navigateToPage() {
+  router.push({ query: { page: currPage.value } })
 }
 
 function navigateNext() {
-  currPage.value++
-  router.push({ query: {page: Number(currPage.value)} });
+  if (currPage.value < props.total_pages) {
+    currPage.value++
+    router.push({ query: { page: Number(currPage.value) } });
+  }
+  else{
+    currPage.value = props.total_pages
+  }
 }
 
-function navigatePrevious(){
+function navigatePrevious() {
   currPage.value--
-  router.push({ query: {page: Number(currPage.value)} });
+  router.push({ query: { page: Number(currPage.value) } });
 
 }
 </script>
 
 <style scoped>
 input[type='number'] {
-    -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 </style>
