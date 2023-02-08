@@ -10,8 +10,8 @@
   </div>
 </template>
 <script setup>
-import { HomeIcon, Squares2X2Icon, MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
-import {HomeIcon as HomeSolid, Squares2X2Icon as ListSolid, MagnifyingGlassIcon as MagnnifyingSolid} from '@heroicons/vue/24/solid'
+import { HomeIcon, BookmarkIcon, MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
+import {HomeIcon as HomeSolid, BookmarkIcon as BookmarkSolid, MagnifyingGlassIcon as MagnnifyingSolid} from '@heroicons/vue/24/solid'
 import { useRoute, useRouter } from 'vue-router'
     const route = useRoute()
 
@@ -23,10 +23,10 @@ import { useRoute, useRouter } from 'vue-router'
         activeIcon: HomeSolid
       },
       {
-        path: '/categories',
-        name: '',
-        icon: Squares2X2Icon,
-        activeIcon: ListSolid
+        path: '/favorites',
+        name: 'favorites',
+        icon: BookmarkIcon,
+        activeIcon: BookmarkSolid
       },
       {
         path: '/search',

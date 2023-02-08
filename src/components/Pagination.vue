@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-stretch gap-3 py-4">
+  <div class="flex items-stretch gap-3 py-8">
     <button class="prev rounded-md p-2 bg-slate-900 hover:bg-rose-600 transition-all" @click="navigatePrevious">
       <ChevronLeftIcon class=" text-white w-6 h-6" />
     </button>

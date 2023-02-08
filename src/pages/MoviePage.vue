@@ -9,7 +9,7 @@ const route = useRoute();
 const store = useMovieStore();
 const { movie } = storeToRefs(store);
 
-onMounted(async () => {
+onMounted( () => {
   store.getSingleMovie(route.params.id);
 });
 </script>

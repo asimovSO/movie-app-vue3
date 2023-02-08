@@ -23,9 +23,10 @@ watch(route, () => store.getMovies(route.params.type || 'popular', route.query.p
       <MovieCard v-for="movie in movies.results" :key="movie.id" :id="movie.id" :title="movie.title"
         :release-year="movie.release_date" :poster="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" />
     </div>
-    <button @click="navigateNext">NEXT</button>
     <!-- <button @click="goNext" >Next</button> -->
+    <div class="flex justify-center w-full">
     <Pagination :total_pages="movies.total_pages" :currPage="route.query.page || 1" />
+    </div>
   </div>
   <div v-else>Loading...</div>
 </template>

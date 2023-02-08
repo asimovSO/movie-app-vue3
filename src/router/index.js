@@ -27,6 +27,11 @@ export default createRouter({
       path: '/search',
       component: () => import('../pages/SearchPage.vue'),
       name: 'search'
+    },
+    {
+      path: '/favorites',
+      component: () => import('../pages/FavoritePage.vue'),
+      name: 'favorites'
     }
   ],
 });
