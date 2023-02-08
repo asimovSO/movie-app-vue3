@@ -9,6 +9,8 @@ lerna-debug.log*
 
 db.json
 env
+.env
+./.env
 
 node_modules
 dist
