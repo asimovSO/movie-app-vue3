@@ -32,7 +32,8 @@ onMounted(() => getQueryMovie())
 </script>
 
 <template>
-  <div class="w-full flex items-stretch justify-center">
+  <div>
+    <div class="w-full flex items-stretch justify-center">
     <div class="max-w-[600px] flex items-stretch gap-2 flex-grow">
       <input
         type="text block "
@@ -63,4 +64,5 @@ onMounted(() => getQueryMovie())
     />
   </div>
   <div v-if="notFound == true" class="text-xl font-medium my-4">Nothing found</div>
+  </div>
 </template>

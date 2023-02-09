@@ -6,7 +6,7 @@ export const useMovieStore = defineStore("movies", () => {
   const singleMovieData = ref();
   const trendingMoviesData = ref();
   const moviesData = ref();
-  const favoriteMoviesData = ref(JSON.parse(localStorage.getItem('favorites_movies')));
+  let favoriteMoviesData = ref(JSON.parse(localStorage.getItem('favorites_movies')) || []);
 
   function setFavoriteMovies(id, title, poster) {
     favoriteMoviesData.value.push({
