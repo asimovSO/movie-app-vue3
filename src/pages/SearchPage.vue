@@ -34,7 +34,7 @@ onMounted(() => getQueryMovie())
 <template>
   <div>
     <div class="w-full flex items-stretch justify-center">
-    <div class="max-w-[600px] flex items-stretch gap-2 flex-grow">
+    <div class="max-w-[600px] flex items-stretch gap-2 flex-grow mb-4">
       <input
         type="text block "
         v-model="query"

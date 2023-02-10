@@ -20,7 +20,7 @@ function navigateToMovie(id){
 <template>
   <div class="h-full w-full relative left-1/2 top-0 -translate-x-1/2">
     <img :src="'https://image.tmdb.org/t/p/original' + poster" alt="" class="w-full h-full object-cover bg-center rounded-md ">
-    <div class="rounded scale-90 md:scale-100 py-2 sm:py-4 px-4 absolute bg-black/40 backdrop-blur-[4px] bottom-4 left-2 sm:bottom-8  sm:left-8  sm:max-w-[75%]  max-w-[90%]
+    <div class="rounded scale-90 md:scale-100 py-2 sm:py-4 px-4 absolute bg-black/40 backdrop-blur-[4px] bottom-4 left-2 sm:bottom-8  sm:left-8  sm:max-w-[75%] md:max-w-[55%] max-w-[90%]
       flex flex-col justify-between gap-2 sm:gap-4">
       <div class="break-words">
         <h1 class=" title text-lg sm:text-xl mb-2 font-semibold ">{{ title }}</h1>

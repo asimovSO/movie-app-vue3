@@ -4,7 +4,7 @@
     <div class="overflow-auto py-8 px-6 h-screen flex-grow">
       <router-view v-slot="{ Component }">
         <Transition name="fade" mode="out-in">
-          <keep-alive exclude="MoviePage, FavoritePage">
+          <keep-alive exclude="MoviePage, FavoritePage, SearchPage">
             <component :is="Component"></component>
           </keep-alive> </Transition
       ></router-view>

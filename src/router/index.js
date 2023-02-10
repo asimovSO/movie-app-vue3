@@ -19,7 +19,7 @@ export default createRouter({
       name: 'movies'
     },
     {
-      path: "/movies/:id",
+      path: "/movie/:id",
       component: () => import('../pages/MoviePage.vue'),
       name: "moviePage",
     },

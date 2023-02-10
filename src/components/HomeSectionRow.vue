@@ -31,7 +31,7 @@ onMounted(async() => await getFetchedMovies(props.typeSearch))
         <component :is="ChevronRightIcon" class="h-6 block font-semibold text-rose-600" />
     </div>
     </router-link>
-    <div class="grid md:grid-cols-6 grid-cols-2 md:gap-x-16 gap-x-4 gap-y-8 w-full">
+    <div class="grid md:grid-cols-6 grid-cols-2 sm:grid-cols-3 md:gap-x-8  gap-x-4 gap-y-8 w-full">
       <movie-card v-for="(mov, idx) in varMovies.results.slice(0, 12)" :id="mov.id" :key="mov.id" :title="mov.title"
         :releaseYear="mov.release_date" :poster="mov.poster_path"></movie-card>
     </div>
