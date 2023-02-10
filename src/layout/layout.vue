@@ -1,6 +1,5 @@
 <template>
   <div class="sm:flex sm:flex-col-reverse md:flex-row h-screen overflow-hidden">
-    <Navbar />
     <div class="overflow-auto py-8 px-6 h-screen flex-grow"><Transition name="fade" mode="out-in"
             >
       <router-view v-slot="{ Component }">
