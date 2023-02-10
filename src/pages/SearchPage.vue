@@ -53,7 +53,7 @@ onMounted(() => getQueryMovie())
   <div v-if="route.query.q && !notFound" class="my-4 text-xl">
     Results on request: <span class="font-semibold">{{ route.query.q }}</span>
   </div>
-  <div class="grid grid-cols-4 gap-16">
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
     <MovieCard
       v-for="mov in arrResultsMovies.results"
       :key="mov.id"

@@ -16,7 +16,7 @@ onMounted( () => {
 
 <template>
   <div v-if="movie">
-    <section class="flex flex-col sm:flex-row items-center gap-6">
+    <section class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
       <div class="poster h-96 flex-shrink-0 mb-4 sm:mb-0">
         <img
           class="h-full rounded-md"
