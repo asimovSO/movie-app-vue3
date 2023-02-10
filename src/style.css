@@ -14,10 +14,10 @@
 
 @layer components{
     .navbar{
-        @apply md:h-screen p-4 bg-bg-light sm:flex-row sm:flex md:flex md:flex-col items-center justify-between 
+        @apply md:h-screen p-4 bg-bg-light flex-row flex md:flex sm:flex-col items-center justify-center md:justify-between
     }
     .nav-links{
-        @apply flex items-center sm:flex-row md:flex-col
+        @apply flex items-center flex-row md:flex-col
     }
    .nav-link-active{
     @apply text-rose-600 bg-gray-700/25
