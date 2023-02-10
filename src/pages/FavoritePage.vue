@@ -3,9 +3,8 @@ import { ref, onMounted } from "vue";
 import FavoriteCard from "../components/FavoriteCard.vue";
 import { useMovieStore } from "../stores/useMovieStore";
 // console.log(localStorage.getItem('favorites_movies'));
-const store = useMovieStore()
-const favMovies = ref()
-
+const store = useMovieStore();
+const favMovies = ref();
 </script>
 
 <template>

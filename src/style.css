@@ -1,10 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base{
+    html,
     body{
-        @apply h-screen bg-bg text-white
+        @apply h-screen bg-bg text-white;
     };
     .nav-item svg{
         @apply text-rose-600 

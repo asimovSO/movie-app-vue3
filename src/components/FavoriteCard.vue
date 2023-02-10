@@ -7,7 +7,7 @@
         <img
           :src="'https://image.tmdb.org/t/p/w500/' + poster"
           alt=""
-          class="block h-full object-cover -z-10"
+          class="h-full object-cover"
         />
         <div class="title text-xl font-medium py-2 w-fit">{{ title }}</div>
       </div>
