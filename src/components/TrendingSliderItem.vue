@@ -13,7 +13,7 @@ defineProps({
 })
 
 function navigateToMovie(id){
-  router.push({name: 'moviePage', params: {type: 'trending',id: id}})
+  router.push({name: 'moviePage', params: {id: id}})
 }
 </script>
 

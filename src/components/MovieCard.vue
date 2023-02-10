@@ -39,7 +39,7 @@ function doAddFavorite() {
     <router-link
       :to="{
         name: 'moviePage',
-        params: { type: route.params.type || 'popular', id: id },
+        params: { id: id },
       }"
     >
       <div class="w-full h-full">

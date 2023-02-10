@@ -3,7 +3,7 @@
     class="w-full h-[200px]  border-2 border-rose-600 rounded-md mr-4 flex justify-between"
   >
     <router-link
-      :to="{ name: 'moviePage', params: { type: 'popular', id: id } }"
+      :to="{ name: 'moviePage', params: {  id: id } }"
     >
       <div class="flex gap-4 h-full">
         <img

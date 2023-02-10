@@ -14,7 +14,11 @@ onMounted( () => {
   store.getMovies(route.params.type || 'popular', route.query.page || 1);
 });
 
-watch(route, () => store.getMovies(route.params.type || 'popular', route.query.page));
+watch(() => route.query.page, () => {
+  if(route.query.page){
+    store.getMovies(route.params.type || 'popular', route.query.page)
+  }
+});
 </script>
 
 <template>

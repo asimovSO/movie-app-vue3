@@ -1,13 +1,13 @@
 <template>
   <div class="sm:flex sm:flex-col-reverse md:flex-row h-screen overflow-hidden">
-    <div class="overflow-auto py-8 px-6 h-screen flex-grow"><Transition name="fade" mode="out-in"
-            >
+    <Navbar/>
+    <div class="overflow-auto py-8 px-6 h-screen flex-grow">
       <router-view v-slot="{ Component }">
-        <keep-alive exclude="MoviePage, FavoritePage">
-          <component :is="Component"></component
-          >
-        </keep-alive>
-      </router-view></Transition>
+        <Transition name="fade" mode="out-in">
+          <keep-alive exclude="MoviePage, FavoritePage">
+            <component :is="Component"></component>
+          </keep-alive> </Transition
+      ></router-view>
     </div>
   </div>
 </template>
