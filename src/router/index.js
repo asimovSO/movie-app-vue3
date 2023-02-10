@@ -8,6 +8,10 @@ export default createRouter({
   history: createWebHistory(),
   routes: [
     {
+      path: '/:pathMatch(.*)*',
+      component: () => import('../pages/404Page.vue')
+    },
+    {
       path: "/home",
       component: HomePage,
       alias: '/',
@@ -19,7 +23,7 @@ export default createRouter({
       name: 'movies'
     },
     {
-      path: "/movies/:type/:id",
+      path: "/movie/:id",
       component: () => import('../pages/MoviePage.vue'),
       name: "moviePage",
     },

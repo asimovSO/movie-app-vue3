@@ -32,8 +32,9 @@ onMounted(() => getQueryMovie())
 </script>
 
 <template>
-  <div class="w-full flex items-stretch justify-center">
-    <div class="max-w-[600px] flex items-stretch gap-2 flex-grow">
+  <div>
+    <div class="w-full flex items-stretch justify-center">
+    <div class="max-w-[600px] flex items-stretch gap-2 flex-grow mb-4">
       <input
         type="text block "
         v-model="query"
@@ -52,7 +53,7 @@ onMounted(() => getQueryMovie())
   <div v-if="route.query.q && !notFound" class="my-4 text-xl">
     Results on request: <span class="font-semibold">{{ route.query.q }}</span>
   </div>
-  <div class="grid grid-cols-4 gap-16">
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
     <MovieCard
       v-for="mov in arrResultsMovies.results"
       :key="mov.id"
@@ -63,4 +64,5 @@ onMounted(() => getQueryMovie())
     />
   </div>
   <div v-if="notFound == true" class="text-xl font-medium my-4">Nothing found</div>
+  </div>
 </template>

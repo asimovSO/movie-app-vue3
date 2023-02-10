@@ -14,5 +14,6 @@ import Layout from './layout/layout.vue';
 body, html{
   height: 100vh;
   overflow: hidden;
+  font-family: 'Poppins';
 }
 </style>

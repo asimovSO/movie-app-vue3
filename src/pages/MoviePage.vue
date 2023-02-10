@@ -16,10 +16,10 @@ onMounted( () => {
 
 <template>
   <div v-if="movie">
-    <section class="flex justify-start gap-6">
-      <div class="poster h-96 flex-shrink-0">
+    <section class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+      <div class="poster h-96 flex-shrink-0 mb-4 sm:mb-0">
         <img
-          class="h-full"
+          class="h-full rounded-md"
           :src="'https://image.tmdb.org/t/p/original' + movie.poster_path"
           alt=""
         />

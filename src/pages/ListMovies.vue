@@ -14,12 +14,16 @@ onMounted( () => {
   store.getMovies(route.params.type || 'popular', route.query.page || 1);
 });
 
-watch(route, () => store.getMovies(route.params.type || 'popular', route.query.page));
+watch(() => route.query.page, () => {
+  if(route.query.page){
+    store.getMovies(route.params.type || 'popular', route.query.page)
+  }
+});
 </script>
 
 <template>
   <div v-if="movies">
-    <div class="grid grid-cols-5 gap-8">
+    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8">
       <MovieCard v-for="movie in movies.results" :key="movie.id" :id="movie.id" :title="movie.title"
         :release-year="movie.release_date" :poster="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" />
     </div>

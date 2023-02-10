@@ -51,7 +51,7 @@ onMounted(() => store.getTrendingMovies())
   <Swiper
     v-if="store.trendingMoviesData"
     :modules="[EffectFade, Pagination]"
-    class="md:h-[400px] sm:h-56 max-w-[900px] py-8"
+    class="md:h-[400px]  max-w-[900px] py-8"
     :pagination="paginationOptions"
     effect="fade"
     :fadeEffect="{
